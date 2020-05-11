@@ -1,8 +1,8 @@
-import java.util.HashSet;
-
 // Given a collection of numbers and sum. Find a matching pair equal to the sum.
 // e.g  [1,2,3,9]  sum=8 --> Answer False
 // e.g  [1,2,4,4]  sum=8 --> Answer True
+
+import java.util.HashSet;
 
 public class GoogleInterview{
   public static void main(String[] args){
