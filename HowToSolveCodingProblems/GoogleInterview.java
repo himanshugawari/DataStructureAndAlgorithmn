@@ -16,8 +16,8 @@ public class GoogleInterview{
     System.out.println(solution2(a,sum)); // O(n)
     System.out.println(solution2(b,sum)); // O(n)
 
-    System.out.println(solution3(a,sum)); // O(n)
-    System.out.println(solution3(b,sum)); // O(n)
+    System.out.println(solution3(a,sum));// O(n) SpaceComplexity->O(n)
+    System.out.println(solution3(b,sum));// O(n) SpaceComplexity->O(n)
   }
 
   public static boolean solution1(int[] array,int sum){
