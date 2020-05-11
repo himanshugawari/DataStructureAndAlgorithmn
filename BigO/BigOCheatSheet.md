@@ -30,3 +30,11 @@ A and B arrays nested would be O(a*b).
 - Data Structures
 - Function Call
 - Allocations
+
+# From https://www.bigocheatsheet.com/
+- Big-O Complexity Chart
+![alt text](images/1.png)
+- Common Data Structure Operations
+![alt text](images/2.png)
+- Array Sorting Algorithms
+![alt text](images/3.png)
