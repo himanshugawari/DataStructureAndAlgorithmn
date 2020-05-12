@@ -6,6 +6,7 @@
 // return true or false
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class InterviewQuestion{
   public static void main(String[] args){
@@ -20,8 +21,8 @@ public class InterviewQuestion{
 
     System.out.println("---------");
 
-    System.out.println(solution2(arr1,arr2)); // O(n+n) or O(a+b)  Space Complexity --> O(array1)
-    System.out.println(solution2(brr1,brr2)); // O(n+n) or O(a+b)  Space Complexity --> O(array1)
+    System.out.println(solution3(arr1,arr2)); // O(n+n) or O(a+b)  Space Complexity --> O(array1)
+    System.out.println(solution3(brr1,brr2)); // O(n+n) or O(a+b)  Space Complexity --> O(array1)
   }
 
   public static boolean solution1(char[] array1,char[] array2){
@@ -46,6 +47,21 @@ public static boolean solution2(char[] array1,char[] array2){
   //System.out.println(map.toString());
   for(int i=0;i<array2.length;i++){
     if(map.containsKey(array2[i])){
+      return true;
+    }
+  }
+  return false;
+}
+
+// Same as Solution2 only using HashSet instead of HashMap
+public static boolean solution3(char[] array1,char[] array2){
+  HashSet<Character> set=new HashSet<>();
+  for(int i=0;i<array1.length;i++){
+    if(!set.contains(array1[i])){
+      set.add((Character)array1[i]);
+    }
+  for(int i=0;i<array2.length;i++){
+    if(set.contains(array2[i])){
       return true;
     }
   }
