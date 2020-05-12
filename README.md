@@ -5,3 +5,5 @@
 ## Reference 
 - https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms
 - https://www.geeksforgeeks.org/
+- https://docs.oracle.com/javase/8/docs/api/index.html
+- https://www.bigocheatsheet.com/
