@@ -88,16 +88,6 @@ public class ArrayExample{
     char[] cloneOfcloneA=cloneA.clone();
     System.out.println(new String(cloneOfcloneA)+"\n");
 
-    //Array to List using asList
-    List<String> list=Arrays.asList("himanshu","hardik","atsuko");
-    System.out.println(list.toString());
-    String[] list1=new String[]{"himanshu","hardik","atsuko"};
-    System.out.println(Arrays.asList(list1).toString()+"\n");
-
-    //Collection to Object[]
-    List<String> lis=Arrays.asList("himanshu","hardik","atsuko");
-    System.out.println(Arrays.toString(lis.toArray())+"\n");
-
     //hashcode
     char[] hash1=new char[]{'a','b','c','d','e','f','g','h','i','j'};
     char[] hash2=new char[]{'a','b','c','d','e','f','g','h','i','j'};
@@ -110,5 +100,25 @@ public class ArrayExample{
     //equal same as deepEqual for nested elements
     //toString same as deepToString for nested elements
     //hashCode same as deepHashCode for nested elements
+
+    //Array to List using asList
+    List<String> list=Arrays.asList("himanshu","hardik","atsuko");
+    System.out.println(list.toString());
+    String[] list1=new String[]{"himanshu","hardik","atsuko"};
+    System.out.println(Arrays.asList(list1).toString()+"\n");
+
+    //Collection to Object[]
+    List<String> lis=Arrays.asList("himanshu","hardik","atsuko");
+    System.out.println(Arrays.toString(lis.toArray())+"\n");
+
+    //List to Array
+    List<String> temp=new ArrayList<>();
+    temp.add("himanshu");
+    temp.add("hardik");
+    temp.add("atsuko");
+    System.out.println(temp.toString());
+    String[] liToArr=Arrays.copyOf(temp.toArray(),temp.size(),String[].class);
+    System.out.println(Arrays.toString(liToArr)+"\n");
+
   }
 }
