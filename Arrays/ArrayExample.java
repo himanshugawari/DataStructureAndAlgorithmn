@@ -41,19 +41,46 @@ public class ArrayExample{
         // Ms. Atsuko
         System.out.println(names[0][2] + names[1][1]+"\n");
 
-        //Cpoy from Array using System.arraycopy
-        /*public static void arraycopy(Object src, int srcPos,
+    //Cpoy from Array using System.arraycopy  and Arrays.copyOfRange
+    /*public static void arraycopy(Object src, int srcPos,
                              Object dest, int destPos, int length)*/
-        char[] copyFrom = { 'd', 'e', 'c', 'a', 'f', 'f', 'e',
+    char[] copyFrom = { 'd', 'e', 'c', 'a', 'f', 'f', 'e',
 			    'i', 'n', 'a', 't', 'e', 'd' };
-        char[] copyTo = new char[7];
-        System.arraycopy(copyFrom, 2, copyTo, 0, 7);
-        System.out.println(new String(copyTo)+"\n");
+    char[] copyTo = new char[7];
+    System.arraycopy(copyFrom, 2, copyTo, 0, 7);
+    System.out.println(new String(copyTo));
+    char[] copy2 = Arrays.copyOfRange(copyFrom,2,9);
+    System.out.println(Arrays.toString(copy2)+"\n");
 
-        //Arrays.sort  -- In-built Sorting
-        int[] sortEx=new int[]{5,9,1,2,3,2,8,7,6,4};
-        Arrays.sort(sortEx);
-        System.out.println(Arrays.toString(sortEx));
 
+    //Arrays.sort  -- In-built Sorting
+    int[] sortEx=new int[]{5,9,1,2,3,2,8,7,6,4};
+    Arrays.sort(sortEx);
+    System.out.println(Arrays.toString(sortEx)+"\n");
+
+    //Arrays.binarySearch  -- In-built Sorting
+    int[] searchEx=new int[]{5,9,1,2,3,2,8,7,6,4};
+    Arrays.sort(searchEx);
+    System.out.println(Arrays.binarySearch(searchEx,15));
+    System.out.println(Arrays.binarySearch(searchEx,9)+"\n");
+    
+    //Equals
+    System.out.println(sortEx.equals(searchEx));
+    System.out.println(sortEx.equals(sortEx)+"\n");
+
+    //Fill
+    String[] arr=new String[10];
+    Arrays.fill(arr,"hi");
+    System.out.println(Arrays.toString(arr));
+    String[] arr1=new String[10];
+    Arrays.fill(arr1,4,6,"hi");
+    System.out.println(Arrays.toString(arr1)+"\n");
+
+    //copyOf and copyOfRange
+    char[] cp={'a','b','c','d','e','f','g','h','i','j'};
+    char[] cp1=Arrays.copyOf(cp,5);
+    System.out.println(new String(cp1));
+    char[] cp2=Arrays.copyOfRange(cp,5,9);
+    System.out.println(new String(cp2)+"\n");
   }
 }
