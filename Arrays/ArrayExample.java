@@ -82,5 +82,25 @@ public class ArrayExample{
     System.out.println(new String(cp1));
     char[] cp2=Arrays.copyOfRange(cp,5,9);
     System.out.println(new String(cp2)+"\n");
+
+    //Clone
+    char[] cloneA={'a','b','c','d','e'};
+    char[] cloneOfcloneA=cloneA.clone();
+    System.out.println(new String(cloneOfcloneA)+"\n");
+
+    //Array to List using asList
+    List<String> list=Arrays.asList("himanshu","hardik","atsuko");
+    System.out.println(list.toString());
+    String[] list1=new String[]{"himanshu","hardik","atsuko"};
+    System.out.println(Arrays.asList(list1).toString()+"\n");
+
+    //Collection to Object[]
+    List<String> lis=Arrays.asList("himanshu","hardik","atsuko");
+    System.out.print(Arrays.toString(lis.toArray())+"\n");
+
+    //hashcode
+    char[] hash1=new char[]{'a','b','c','d','e','f','g','h','i','j'};
+    char[] hash2=new char[]{'a','b','c','d','e','f','g','h','i','j'};
+
   }
 }
