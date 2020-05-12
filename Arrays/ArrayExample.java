@@ -96,11 +96,19 @@ public class ArrayExample{
 
     //Collection to Object[]
     List<String> lis=Arrays.asList("himanshu","hardik","atsuko");
-    System.out.print(Arrays.toString(lis.toArray())+"\n");
+    System.out.println(Arrays.toString(lis.toArray())+"\n");
 
     //hashcode
     char[] hash1=new char[]{'a','b','c','d','e','f','g','h','i','j'};
     char[] hash2=new char[]{'a','b','c','d','e','f','g','h','i','j'};
+    System.out.println(Arrays.equals(hash1, hash2));
+    System.out.println(Arrays.hashCode(hash1));
+    System.out.println(Arrays.hashCode(hash2));
+    System.out.println(Arrays.hashCode(hash1)==Arrays.hashCode(hash2));
+    System.out.format("\n");
 
+    //equal same as deepEqual for nested elements
+    //toString same as deepToString for nested elements
+    //hashCode same as deepHashCode for nested elements
   }
 }
