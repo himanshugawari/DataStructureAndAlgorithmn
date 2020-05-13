@@ -2,8 +2,7 @@ import java.util.*;
 
 public class ArrayListExample{
   public static void main(String[] args){
-    //List<E> arrayList=new ArrayList<>()
-    ;
+    //List<E> arrayList=new ArrayList<>();
     //Constructs an empty list with an initial capacity of 10.
 
     //Constructs an empty list with an initial capacity of 5;
