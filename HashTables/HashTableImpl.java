@@ -53,13 +53,15 @@ class HashTable{
 }
 
 public class HashTableImpl{
-  HashTable hashTable=new HashTable(2);
+  HashTable hashTable=new HashTable(50);
   public static void main(String[] args){
     HashTableImpl impl=new HashTableImpl();
     impl.setContent("grapes",1000);
     impl.setContent("apples",54);
     impl.setContent("mangoes",589);
     impl.getContent("grapes");
+    impl.getContent("apples");
+    impl.getContent("mangoes");
   }
 
   public void setContent(String key,int value){
