@@ -1,5 +1,8 @@
 import java.util.*;
 
+//Simple implenentation.
+//Data insertion in case of collision is not implemnted.
+
 class Data{
   private String key;
   private int value;
