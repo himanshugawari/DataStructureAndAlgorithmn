@@ -58,7 +58,7 @@ public class ArrayExample{
     Arrays.sort(sortEx);
     System.out.println(Arrays.toString(sortEx)+"\n");
 
-    //Arrays.binarySearch  -- In-built Sorting
+    //Arrays.binarySearch  -- In-built Searching
     int[] searchEx=new int[]{5,9,1,2,3,2,8,7,6,4};
     Arrays.sort(searchEx);
     System.out.println(Arrays.binarySearch(searchEx,15));
@@ -118,7 +118,9 @@ public class ArrayExample{
     temp.add("atsuko");
     System.out.println(temp.toString());
     String[] liToArr=Arrays.copyOf(temp.toArray(),temp.size(),String[].class);
-    System.out.println(Arrays.toString(liToArr)+"\n");
-
+    System.out.println(Arrays.toString(liToArr));
+    String[] liToArr1=new String[temp.size()];
+    liToArr1=temp.toArray(liToArr1);
+    System.out.println(Arrays.toString(liToArr1)+"\n");
   }
 }
