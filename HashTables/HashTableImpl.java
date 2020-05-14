@@ -12,6 +12,10 @@ class Data{
     this.value=value;
   }
 
+  public String getkey(){
+    return this.key;
+  }
+
   public String getData(){
     String v=String.valueOf(this.value);
     return this.key+" "+v;
@@ -22,9 +26,12 @@ class Data{
 class HashTable{
   private int length;
   private Data[] data;
+  private int addr[];
+  private static int counter=0;
   HashTable(int size){
     this.length=size;
     this.data= new Data[size];
+    this.addr=new int[size];
   }
 
   public int hashCode(String key){
@@ -34,6 +41,8 @@ class HashTable{
      //System.out.println(hash);
     }
     System.out.println(hash);
+    addr[counter]=hash;
+    counter++;
     return hash;
   }
 
@@ -53,6 +62,15 @@ class HashTable{
     int address=hashCode(key);
     return this.data[address].getData();
   }
+
+  public String getKeys(){
+    StringBuffer sb=new StringBuffer();
+    for(Integer i: this.addr){
+      if(i!=0)
+        sb.append(i).append(" ");
+    }
+    return new String(sb);
+  }
 }
 
 public class HashTableImpl{
@@ -65,6 +83,7 @@ public class HashTableImpl{
     impl.getContent("grapes");
     impl.getContent("apples");
     impl.getContent("mangoes");
+    impl.getKeys();
   }
 
   public void setContent(String key,int value){
@@ -74,5 +93,9 @@ public class HashTableImpl{
 
   public void getContent(String key){
     System.out.println(hashTable.get(key));
+  }
+
+  public void getKeys(){
+    System.out.println(hashTable.getKeys());
   }
 }
