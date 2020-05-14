@@ -1,5 +1,6 @@
-#Methods for Java LinkedList:
-##https://www.geeksforgeeks.org/linked-list-in-java/
+# Methods for Java LinkedList:
+
+## https://www.geeksforgeeks.org/linked-list-in-java/
 
 - add​(int index, E element): This method Inserts the specified element at the specified position in this list.
 - add​(E e): This method Appends the specified element to the end of this list.
