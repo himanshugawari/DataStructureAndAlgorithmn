@@ -2,6 +2,7 @@
 
 ## https://www.geeksforgeeks.org/linked-list-in-java/
 
+
 - add​(int index, E element): This method Inserts the specified element at the specified position in this list.
 - add​(E e): This method Appends the specified element to the end of this list.
 - addAll​(int index, Collection c): This method Inserts all of the elements in the specified collection into this list, starting at the specified position.
