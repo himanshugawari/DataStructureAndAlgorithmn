@@ -17,8 +17,7 @@ class Data{
   }
 
   public String getData(){
-    String v=String.valueOf(this.value);
-    return this.key+" "+v;
+    return this.key+" "+String.valueOf(this.value);
   }
 }
 
@@ -38,11 +37,9 @@ class HashTable{
     int hash = 0 , R=31;
     for (int i = 0; i < key.length(); i++){
      hash = ( R * hash + key.charAt(i)) % this.length;
-     //System.out.println(hash);
     }
-    System.out.println(hash);
-    addr[counter]=hash;
-    counter++;
+    //System.out.println(hash);
+    addr[counter++]=hash;
     return hash;
   }
 
@@ -51,7 +48,6 @@ class HashTable{
     if(data[address]==null){
       this.data[address]=new Data(key,value);
       System.out.println(this.data[address].getData());
-      //System.out.println(getContent());
     }else{
       this.data[address]=new Data(key,value);
       System.out.println(this.data[address].getData());
@@ -88,7 +84,6 @@ public class HashTableImpl{
 
   public void setContent(String key,int value){
     hashTable.set(key,value);
-    //System.out.println(hashTable.set(key,value));
   }
 
   public void getContent(String key){
